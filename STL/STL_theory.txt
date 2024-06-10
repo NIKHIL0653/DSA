@@ -8,4 +8,33 @@ cout << p.first << " " << p.second.first << " " << p.second.first;
 
 pair <int, int> arr[] = { {1, 2}, {2, 5}, {5, 1}}
                             (0)     (1)     (2)
+
 cout << arr[1].second -> (5)
+
+2. Vectors:
+
+void explainVector(){
+
+    vector<int> v;
+
+    v.push_back(1);   // creates an empty container and inserts 1 into it
+    v.emplace_back(2);  //same func as push_back inserts 2 in this case
+
+    vector<pair<int, int>>vec;  //vectors can also be used with pairs
+
+    v.push_back({1, 2})  // diff btwn the 2 is of the syntax emplace_back
+    v.emplace_back(1, 2);  // can simply insert an array without adding the curly brackets to define that it is an array
+
+    vector v1(5); // initializes a vector of size 5
+
+    ** Can we increase the size now? Yes we can simply use push_back or emplace_back
+       and it will increase the size and insert a number **
+
+    vector<int> v(5, 100);  // -> {100, 100, 100, 100, 100}
+
+    vector<int> v1(5, 20); // ->{20, 20, 20, 20, 20}
+    vector<int> v2(v1); // ->copies contents of v1 into new vector v2
+}
+
+s
+
