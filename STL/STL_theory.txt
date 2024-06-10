@@ -20,7 +20,7 @@ void explainVector(){
     v.push_back(1);   // creates an empty container and inserts 1 into it
     v.emplace_back(2);  //same func as push_back inserts 2 in this case
 
-    vector<pair<int, int>>vec;  //vectors can also be used with pairs
+    vector<pair<int, int>> vec;  //vectors can also be used with pairs
 
     v.push_back({1, 2})  // diff btwn the 2 is of the syntax emplace_back
     v.emplace_back(1, 2);  // can simply insert an array without adding the curly brackets to define that it is an array
@@ -36,5 +36,38 @@ void explainVector(){
     vector<int> v2(v1); // ->copies contents of v1 into new vector v2
 }
 
-s
+// Accessing elements in vectors
+
+cout << v[0] << " " << v.at[0]; // 2 methos to get the 0th element in array
+cout << v.back() << " ";  // points to the element at the back/last element
+
+** Iterators:
+
+vector<int>::iterator it = v.begin(); // it is just a name can be anything
+                            // v.begin will give us only the address and adding a * gives us the data
+it++;
+cout << *(it) << " ";
+
+it+2
+cout << *(it) << " "; // moves 2 times to the next address and * gives the value
+
+vector<int>::iterator it = v.end(); // dosent point to end but after the end it-- will give us end of array
+vector<int>::iterator it = v.rend(); // reverses the array now rend points right after the last element and not the last element itself
+vector<int>::iterator it = v.rbegin(); // points to the last element it++ will move to the left way of the array
+
+** How to print the entire vector at once
+
+for(vector<int>::iterator it = v.begin(); it !=v.end(); it++)
+{
+    cout << *(it) << " "
+}
+
+for (auto it : v){
+    cout << it << " "; // shortcut for above
+                       // auto automatically detects the datatype and iterates along the vector
+}
+
+
+
+
 
