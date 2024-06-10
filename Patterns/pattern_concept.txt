@@ -1,0 +1,6 @@
+4 rules:
+
+1) for outer loop count number of lines
+2) for inner loop focus on the columns and connect them somehow to the rows
+3) print them inside the inner for loop
+4) observe symmetry in the pattern (optional since might not be possible on all patterns)
