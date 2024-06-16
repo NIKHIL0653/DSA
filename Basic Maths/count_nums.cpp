@@ -19,3 +19,8 @@ int main(){
     int value = count_nums(n);
     cout << value;
 }
+
+// Alternate method
+
+//int cnt = (int)(log10(n)+1); if it is a 4 digit num ans will be 
+//somewhere 3-4 typecasting it gives lowest nearest number here 3 and adding 1 gives 4 which is the answer

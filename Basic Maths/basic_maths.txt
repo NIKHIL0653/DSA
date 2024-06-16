@@ -1,2 +1,18 @@
 1. Digits
 
+If we have a number and apply modulo 10 we get the last digit of the number
+    7789 % 10 = 9
+    since in the quotient we will have the nearest lower number (i.e 7780)
+
+Now we have 778 % 10 = 8
+77 % 10 = 7
+7 % 10 = 7
+Now in the end if we further find modulo we get 0
+(Basically we are performing division and returning the integer part for further modulo operation and returning the last digit since it is the remainder)
+
+2. Reversing a number:
+
+Similar logic to counting digits
+Here we find modulo 10 and store last digit 
+then we apply a formula (rev_num*10) + last_digit
+and n = n/10 to return the interger part of thr number after modulo
