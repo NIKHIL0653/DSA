@@ -16,3 +16,5 @@ Similar logic to counting digits
 Here we find modulo 10 and store last digit 
 then we apply a formula (rev_num*10) + last_digit
 and n = n/10 to return the interger part of thr number after modulo
+
+3. Palindrome number
