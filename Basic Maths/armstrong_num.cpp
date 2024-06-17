@@ -45,3 +45,20 @@ int main(){
 //     else cout << n << " is not an Armstrong Number";
 //     return 0;
 // }
+
+//code studio submission
+
+// bool isArmstrong(int n) {
+
+//     int temp = n;
+//     int sum =0;
+//     int ld = 0;
+//     int k = (int)(log10(n)+1); // return number of digits
+//     while (temp != 0) {
+//       ld = temp % 10;
+//       sum = sum + pow(ld, k); //question was for kth power not confined only to cube (main req of question)
+//       temp = temp / 10;
+//     }
+
+//     return (sum == n);
+// }
