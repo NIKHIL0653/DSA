@@ -8,7 +8,8 @@ Now we have 778 % 10 = 8
 77 % 10 = 7
 7 % 10 = 7
 Now in the end if we further find modulo we get 0
-(Basically we are performing division and returning the integer part for further modulo operation and returning the last digit since it is the remainder)
+(Basically we are performing division and returning the integer part for further modulo operation
+ and returning the last digit since it is the remainder)
 
 2. Reversing a number:
 
@@ -18,3 +19,10 @@ then we apply a formula (rev_num*10) + last_digit
 and n = n/10 to return the interger part of thr number after modulo
 
 3. Palindrome number
+
+Similar logic to reversing a number we just add an if else statement 
+to check if rev num is equal to original number entered
+keep in mind to store the original number n in another variable like a duplicate since it will change after running loop.
+
+4. Armstrong Numbers:
+
