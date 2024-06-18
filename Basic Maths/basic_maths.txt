@@ -26,3 +26,10 @@ keep in mind to store the original number n in another variable like a duplicate
 
 4. Armstrong Numbers:
 
+for each loop iteration
+extract last digit and store them ,then in a sum variable store sum + ld^3 
+then n = n/10 to remove last digit
+finally check if sum is equal to original number entered
+
+4. Print all divisors:
+
