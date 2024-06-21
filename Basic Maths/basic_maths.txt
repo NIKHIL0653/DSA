@@ -8,7 +8,8 @@ Now we have 778 % 10 = 8
 77 % 10 = 7
 7 % 10 = 7
 Now in the end if we further find modulo we get 0
-(Basically we are performing division and returning the integer part for further modulo operation
+(Basically we are performing division and returning the integer part for further
+modulo operation
  and returning the last digit since it is the remainder)
 
 2. Reversing a number:
@@ -22,7 +23,8 @@ and n = n/10 to return the interger part of thr number after modulo
 
 Similar logic to reversing a number we just add an if else statement 
 to check if rev num is equal to original number entered
-keep in mind to store the original number n in another variable like a duplicate since it will change after running loop.
+keep in mind to store the original number n in another variable like a duplicate
+since it will change after running loop.
 
 4. Armstrong Numbers:
 
@@ -31,5 +33,14 @@ extract last digit and store them ,then in a sum variable store sum + ld^3
 then n = n/10 to remove last digit
 finally check if sum is equal to original number entered
 
-4. Print all divisors:
+5. Print all divisors:
+First run a loop from 1 till the number we need to print the divisors and print the 
+numbers if reminder after division is == 0.
+
+6. Check Prime:
+run loop from 1 to the num itself and check how many numbers upon dividing gives == 0
+and store that value in a counter cnt, 
+if cnt == 2 then it is a prime number 
+else not prime
+
 
