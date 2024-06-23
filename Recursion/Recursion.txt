@@ -1,0 +1,14 @@
+When a function calls itself until a specified condition is met.
+If not termination condition is specified the function shall keep
+calling itself till it runs out of memory.This phenomenon is called stack overflow
+
+The condition where the function stops calling itself is called as the base condition
+
+What is a recursion tree?
+A recursion tree is a tree data structure that is used to visualize the recursive calls of a function.
+It is a tree where each node represents a function call and the edges represent the recursive calls.
+The root of the tree is the initial function call and the leaf nodes are the base cases.
+
+** Visualy representing the way and order the functions called themselves
+is called a recursion tree. **
+
