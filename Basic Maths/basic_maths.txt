@@ -43,4 +43,12 @@ and store that value in a counter cnt,
 if cnt == 2 then it is a prime number 
 else not prime
 
+7.GCD/HCF:
+GCD is found between 2 numbers (factors of both the numbers and then the
+largest number common among them is the GCD
+apply same concept as prime and run an if statement
+if(n1/i == 0 && n2/i == 0) cout << i;
+i will be from 1 till the minimum of the 2 numbers 
+
+
 
