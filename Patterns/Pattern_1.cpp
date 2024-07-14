@@ -10,7 +10,7 @@ void pattern1(int n){
         }
         cout << endl;
     }
-    
+
 }
 
 int main(){
