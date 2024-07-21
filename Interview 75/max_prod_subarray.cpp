@@ -26,7 +26,7 @@
 using namespace std;
 
 int maxprod(int arr[],int n){
-    int maximum=INT_MIN;
+    int ans=INT_MIN;
     int prefix = 1;
     int suffix = 1;
     for(int i=0;i<n;i++){
@@ -34,18 +34,17 @@ int maxprod(int arr[],int n){
         if (suffix == 0) suffix =1;
         prefix *=arr[i];
         suffix *=arr[n-i-1];
-        int maximum = max(maximum,prefix,suffix);
+        ans = max(ans, max(prefix,suffix));
     }
-    return maximum;
+    return ans;
 }
 
 int main(){
     int n;
-    cin >> n;
+    cin>>n;
     int arr[n];
     for(int i=0;i<n;i++){
-        cin >> arr[i];
-    }
-    int answer = maxprod(arr,n);
-    cout << answer << endl;
+        cin>>arr[i];
+        }
+        cout<<maxprod(arr,n);
 }
