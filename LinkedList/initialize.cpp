@@ -20,5 +20,4 @@ int main(){
     Node* second = new Node(20);
     cout << head -> data << endl;
     cout << second -> next << endl;
-
 }
