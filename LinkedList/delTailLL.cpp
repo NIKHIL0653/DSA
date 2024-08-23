@@ -1,5 +1,11 @@
-#include<bits/stdc++.h>
+//delete tail of LL
+#include <bits/stdc++.h>
 using namespace std;
+
+/*We stop just before the last element 
+and make it point to NULL.
+
+And if we have 1 element in LL we delete that.*/
 
 class Node {
     public:
@@ -17,17 +23,31 @@ class Node {
     }
 };
 
-Node* deleteHead(Node* head){
-    if (head == NULL) return head;
-    /*Now the algo is to move the head ptr to next
-    node, we can do it by storing head in temp
-    and */
+Node* deleteTail (Node* head){
+    //LL is empty || LL has only 1 element
+    if (head == NULL || head -> next == NULL){
+        return NULL;
+    }
+
+    /*We preserve the head and create a temperory pointer
+    that will iterate over the LL, because in the end we 
+    always return the head*/
+
     Node* temp = head;
-    head = head-> next;
-    delete temp;
+
+    while(temp -> next -> next != NULL){
+        temp = temp -> next;
+        //after this the temp will be at 2nd last element
+    }
+    // we will have to free the memory to delete the
+    //last element
+    free (temp->next);
+
+    temp -> next = NULL;
+
     return head;
 }
- 
+
 int main(){
     vector<int> arr = {3,5,7,9,1};
     Node* head = new Node(arr[0]);
@@ -45,7 +65,7 @@ int main(){
     }
     cout << endl;
 
-    head = deleteHead(head);
+    head = deleteTail(head);
 
     current = head;
     while(current != NULL){//Prints LL after deletion
@@ -56,6 +76,3 @@ int main(){
 
 return 0;
 }
-
-
-
