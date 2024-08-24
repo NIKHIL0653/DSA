@@ -17,11 +17,18 @@ class Node {
     }
 };
 
-Node* insertHead (Node* head, int el){
-    /*the idea is to take a temp node and make it
-    point to the current head*/
-    Node* temp = new Node (el,head);
-    return temp;
+Node* insertTail (Node* head, int el){
+    /*the idea is to take a temp pointer and move it
+    to the last node and make sure that temp's next is
+    pointing to NULL and not temp -> NULL*/
+
+    if(head == NULL) return new Node(el);
+    Node* temp = head;
+    while(temp->next != NULL) temp = temp->next;
+
+    Node* newNode = new Node(el);
+    temp -> next = newNode;
+    return head;
 }
 
 int main(){
@@ -31,7 +38,7 @@ int main(){
 
     for(int i =1;i<arr.size();i++){
         Node* newNode = new Node(arr[i]);
-        current->next = newNode;
+        current->next = newNode; 
         current = newNode;
     }
     current = head;
@@ -41,7 +48,7 @@ int main(){
     }
     cout << endl;
 
-    head = insertHead(head, 8);
+    head = insertTail(head, 8);
 
     current = head;
     while(current != NULL){//Prints LL after deletion

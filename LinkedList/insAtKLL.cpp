@@ -17,11 +17,35 @@ class Node {
     }
 };
 
-Node* insertHead (Node* head, int el){
-    /*the idea is to take a temp node and make it
-    point to the current head*/
-    Node* temp = new Node (el,head);
-    return temp;
+Node* insertK (Node* head, int el,int K){
+    /*if K=3 then 2nd element shoudl point to new node and
+    new node to 4th node if LL has 4 nodes and K=5 
+    we can add after 4 and make new node poin to NULL
+    
+    But keep in  kind that K cannot exceed 5*/
+
+    if(head == NULL){
+        if(K == 1) return new Node(el);
+        else return head;
+    }
+    if(K == 1){
+        Node* temp = new Node(el, head);
+        return temp;
+    }
+    int cnt = 0;
+    Node* temp = head;
+
+    while(temp != NULL){
+        cnt++;
+        if(cnt == K-1){
+            Node* x = new Node(el);
+            x -> next = temp -> next;
+            temp -> next = x;
+            break;
+        }
+        temp = temp -> next;
+    }
+    return head;
 }
 
 int main(){
@@ -31,7 +55,7 @@ int main(){
 
     for(int i =1;i<arr.size();i++){
         Node* newNode = new Node(arr[i]);
-        current->next = newNode;
+        current->next = newNode; 
         current = newNode;
     }
     current = head;
@@ -41,7 +65,7 @@ int main(){
     }
     cout << endl;
 
-    head = insertHead(head, 8);
+    head = insertK(head, 8, 2);
 
     current = head;
     while(current != NULL){//Prints LL after deletion
