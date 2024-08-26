@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 // pehle Node define karo
@@ -25,6 +26,18 @@ public:
     // isliye next ko null point karva diye hai
 };
 
+int search (Node* head,int x){
+    Node* temp = head;
+    while(temp != nullptr){
+        if(temp->data == x){
+            return 1;
+        }
+        temp = temp -> next;        
+    }
+    return 0;
+}
+    
+
 // Traversal and printing
 int main()
 {
@@ -50,6 +63,10 @@ int main()
         cout << current->data << " ";
         current = current->next;
     }
+
+    cout << endl;
+    cout << search(head, 8);
+
     cout << endl;
 
     return 0;
