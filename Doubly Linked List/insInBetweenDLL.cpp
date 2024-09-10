@@ -54,7 +54,7 @@ Node* insertBeforeHead(Node* head, int val){
     return newHead;
 }
 
-Node* insInBetweenDLL(Node* head, int val){
+Node* insBeforeTail(Node* head, int val){
     //what if there is only 1 node in DLL we
     //insert befor head or tail
     if(head -> next == NULL){
@@ -74,7 +74,7 @@ Node* insInBetweenDLL(Node* head, int val){
 int main(){
     vector<int> arr = {1, 2, 3, 4, 5};
     Node* head = arr2DLL(arr);
-    head = insInBetweenDLL(head, 9);
+    head = insBeforeTail(head, 9);
     print(head);
     return 0;
 }
