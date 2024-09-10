@@ -45,7 +45,7 @@ void print(Node *head)
         cout << head->data << " ";
         head = head->next;
     }
-};
+}
 
 Node* insertBeforeHead(Node* head, int val){
     Node* newHead = new Node(val, head, nullptr);
