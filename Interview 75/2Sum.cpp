@@ -51,3 +51,5 @@ int main()
 //     cout << "This is the answer for variant 1: " << ans << endl;
 //     return 0;
 // }
+
+//just adding to check if github recognizez or not
