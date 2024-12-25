@@ -43,7 +43,7 @@
 #         print("Time can't be less than or equal to zero")
 #     else:
 #         break
-
+ 
 # while True:
 #     time = int(input("Enter the time in years: "))
 #     if time < 0:
