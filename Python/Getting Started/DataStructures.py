@@ -62,3 +62,72 @@ print(arr)
 arr = [[0]*4 for i in range(4)] # we create an array of 0's with 4 elements 
 # then we add this array we created to the outer array 4 times with the inner loop we are running
 print(arr) # this will make a 4x4 matrix where each element will be unique
+
+arr = [[0] * 4] * 4 # this looks correct but isn't
+# this will create a 4x4 matrix but all the inner arrays (each row of the matrix) will be the same
+# so if we modify any one of the row all other rows will be modified
+# the previous approach will created uniques elements
+
+# Strings:
+s = "abc"
+print(s[0:2])
+
+s += "def"
+print(s)
+# string modification is an O(n) process
+
+print(int("123") + int("123"))
+print(str(123) + str(123))
+
+strings = ["ab", "cd", "ef"]
+print("".join(strings))
+
+# Hashset
+
+mySet = set() # we can insert and search values in constant time
+mySet.add(1)
+mySet.add(2)
+print(mySet) # Note: there cant be any duplicates
+print(len(mySet)) 
+
+print(1 in mySet)
+print(2 in mySet)
+print(3 in mySet)
+
+mySet.remove(2)
+print(2 in mySet)
+
+# set comprehension
+# we can insert multiple values by running a loop
+mySet = {i for i in range(10)}
+print(mySet)
+
+# Hashmap aks dict
+myMap = {}
+myMap["name"] = "John"
+myMap["age"] = 30
+# key and value
+# keys cannot be duplicate
+print(myMap)
+# Also
+myMap = {"alice": 90, "bob": 70} #another way of initializing a hashmap
+
+# hashmaps are called dictionaries in python
+
+# Dict comprehensions
+myMap = { i: 2*i for i in range(3)} # here we created a map where keys are inserted i+1
+# and values are set 2*i correspondingly
+print(myMap)
+
+# Looping through the map
+mySet = { "alice": 90, "bob": 70}
+
+for key in myMap:
+    print(key, myMap[key])
+    
+
+for val in myMap.values():
+    print(val)
+    
+for key, val in myMap.items():
+    print(key, val)
