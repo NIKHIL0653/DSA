@@ -131,3 +131,10 @@ for val in myMap.values():
     
 for key, val in myMap.items():
     print(key, val)
+    
+# tuples
+tup = (1,2,3)
+# tuples are immutable, we cant modify them
+print(tup)
+print(tup[0])
+print(tup[-1])
