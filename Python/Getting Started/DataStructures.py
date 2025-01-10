@@ -138,3 +138,47 @@ tup = (1,2,3)
 print(tup)
 print(tup[0])
 print(tup[-1])
+
+# How tuples can be used in hashmaps/sets
+myMap = {(1,2): 3}
+print(myMap[(1,2)])
+
+mySet = set()
+mySet.add((1,2))
+
+# Note: Lists cannot be used in hashmaps as they are not hashable
+# myMap = [[3,4]] = 5 # this will not work
+
+# Heaps
+import heapq
+
+minHeap = [] # By default heaps in python are minheaps
+heapq.heappush(minHeap, 3)
+heapq.heappush(minHeap, 1)
+heapq.heappush(minHeap, 2)
+
+print(minHeap) # [1, 3, 2] # heaps are not sorted lists
+
+# popping numbers from heap
+while len(minHeap):
+    print(heapq.heappop(minHeap))
+    
+# How to make max heaps
+# Use minheaps and multiply by -1 when push and pop
+import heapq
+maxHeap = []
+heapq.heappush(maxHeap, -3) # -3 is pushed into the heap
+heapq.heappush(maxHeap, -1)
+heapq.heappush(maxHeap, -2)
+
+print(-1 * maxHeap[0]) # [-2, -3, -1]
+
+while len(maxHeap):
+    print(-1 * heapq.heappop(maxHeap))
+    
+# How to put given numbers in a heap
+arr = [1,2,3,4,5]
+heapq.heapify(arr)
+
+while arr:
+    print(heapq.heappop(arr))
