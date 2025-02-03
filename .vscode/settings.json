@@ -3,5 +3,6 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "new": "cpp"
-    }
+    },
+    "java.debug.settings.onBuildFailureProceed": true
 }
