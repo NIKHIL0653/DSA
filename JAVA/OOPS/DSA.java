@@ -21,5 +21,6 @@ public class DSA {
         candy[2] = "Butterfingers";
         System.out.println(candy[2]);
         System.out.println(candy.length);
+        ;
     }
 }
