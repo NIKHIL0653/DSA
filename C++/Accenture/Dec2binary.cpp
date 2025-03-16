@@ -14,7 +14,7 @@ int binary(int n){
 }
 
 int main(){
-    int n = 2;
+    int n = 5;
     binary(n);
     return 0;
 }
