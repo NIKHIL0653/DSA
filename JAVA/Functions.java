@@ -12,3 +12,6 @@ public class Functions {
         PrintName(name);
     }
 }
+
+// functions are saved as a stack in the memory
+// when one thing gets saved in the stack it's called stack frame
