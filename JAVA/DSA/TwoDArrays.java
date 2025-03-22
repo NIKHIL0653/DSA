@@ -16,6 +16,15 @@ public class TwoDArrays {
             }
         }
 
+        int x = sc.nextInt();
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols; j++){
+               if(numbers[i][j] == x){
+                   System.out.println("x found at: ("+ i + ", " + j + ")");
+               }
+            }
+        }
+
         // output
         for(int i = 0; i<rows; i++){
             for(int j = 0; j < cols; j++){
