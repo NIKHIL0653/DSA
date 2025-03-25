@@ -27,7 +27,7 @@ package DSA;
 
 public class BubbleSort {
     public static void printArray(int arr[]){
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < arr.length ; i++){
             System.out.print(arr[i] + " "); // Corrected print statement
         }
         System.out.println(); // Added newline for better formatting
